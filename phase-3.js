@@ -21,11 +21,13 @@ function addManyNums10Timing(increment) {
 // Copy your `addManyNums10` code here
 let sum = [];
     for(let i = 1; i <= 10; i++){
-      console.time(`Time ${i}`);
+      startTime = Date.now();
       let increase = i * increment
       sum.push(addManyNums(increase));
-      console.timeEnd(`Time ${i}`)
+      endTime = Date.now();
+      console.log(`${endTime - startTime} milliseconds`);
     }
+
   return sum;
 // Then, add timing code
 
